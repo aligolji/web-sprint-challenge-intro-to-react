@@ -2,17 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
 import Character from './components/Character';
-import styled from 'styled-components';
-
-const StyledApp = styled.div`
-  border: 2px solid blue;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-
-`
-
 
 
 const App = () => {
@@ -40,14 +29,14 @@ const App = () => {
   // console.log(characters)
 
   return (
-    <StyledApp className="App">
-      <h1 className="Header">Characters</h1>
+    <div className='App'>
+      <h1 className='Header'>Characters</h1>
       {
         characters.map(character => {
           return <Character key={character.id} info={character} />
         })
       }
-    </StyledApp>
+    </div>
   );
 }
 
